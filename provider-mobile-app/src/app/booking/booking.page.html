@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>booking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+      <ion-row>
+        <ion-col size-md="6" offset="3" max-pixal="150">
+            <ion-card >
+                <ion-card-header text-align="center" color="danger">
+                  <ion-card-title >Welcome</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                   <ion-item>
+                     <ion-label position="floating" name="startDate" required>Start date:</ion-label>
+                     <ion-input type="text" [(ngModel)]= "startDate"></ion-input>
+                   </ion-item>
+                   <ion-item>
+                     <ion-label position="floating" name="startMonth" required>Start month:</ion-label>
+                     <ion-input type="text" [(ngModel)]= "startMonth"></ion-input>
+                   </ion-item>
+                   <ion-item>
+                     <ion-label position="floating" name="endDate" required>End date:</ion-label>
+                     <ion-input type="text" [(ngModel)]= "endDate"></ion-input>
+                   </ion-item>
+                   <ion-item>
+                     <ion-label position="floating" name ="endMonth" required>End Month:</ion-label>
+                     <ion-input type="password" [(ngModel)]= "endMonth"></ion-input>
+                   </ion-item>
+                   
+                   <div>
+                    <ion-button color="danger" (click)= "book()">
+                      <ion-icon position="floating" slot="start" name="Booking" required></ion-icon>
+                       Book now.
+                    </ion-button>
+                   </div>
+                   <!-- create alert function to notify the user that the date has been set -->
+                 </ion-card-content>
+               </ion-card>
+               
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>
